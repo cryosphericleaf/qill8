@@ -1,0 +1,167 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins:wght@300;400&display=swap');
+
+body {
+    background-color: rgb(20, 20, 20);
+    margin: 0px;
+}
+
+
+
+
+
+#trademark {
+    content: "";
+    
+    width: 100%;
+    
+    color: white;
+    background-color: rgb(0, 0, 0);
+    
+    position: fixed;
+  
+    
+}
+
+.name {
+    font-size: clamp(2rem, 5vh, 8rem);
+    font-family: 'Comfortaa','Poppins','Times New Roman', Times, serif;
+    margin: 15px;
+}
+
+
+#menu {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.menuitem {
+    color: white;
+    font-size: clamp(3rem, 8vh, 8rem);
+    font-family: 'Poppins','Times New Roman', Times, serif;
+
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vh, 1rem) 0rem;
+    transition: all 400ms ease;
+    
+}
+
+
+
+#menuitems {
+    margin-left: clamp(4rem, 20vw, 48rem);
+    position: fixed;
+    z-index: 3;
+}
+
+#menuitems:hover > .menuitem {
+    opacity: 0.3;
+}
+
+#menuitems:hover > .menuitem:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transform-origin: left; 
+    
+    
+}
+
+
+
+  #menu-background-image {
+    background-image: url("https://images.unsplash.com/photo-1536837289209-12ad2b8b43bf?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center 40%;
+    background-size: 110vmax;
+    height: 100%;
+    left: 0px;  
+    opacity: 0.15;
+    position: fixed;
+    top: 0px;
+    transition: opacity 800ms ease,
+      background-size 800ms ease,
+      background-position 800ms ease;
+    width: 100%;
+    z-index: 0;
+  }
+
+#menu-items:hover ~ #menu-background-image {
+    background-size: 100vmax;
+    opacity: 0.1;
+  }
+
+  #menu[data-active-index="0"] > #menu-background-image {
+    background-position: center 45%;
+  }
+  
+  #menu[data-active-index="1"] > #menu-background-image {
+    background-position: center 50%;
+  }
+  
+  #menu[data-active-index="2"] > #menu-background-image {
+    background-position: center 55%;
+  }
+  
+  #menu[data-active-index="3"] > #menu-background-image {
+    background-position: center 60%;
+  }
+
+#menuitems:hover ~ #menu-background-image {
+    background-size: 100vmax;
+    opacity: 0.1;
+  }
+  
+
+
+
+
+.divider {
+    
+    width: 100%;
+    background-color: #ffffff;
+    margin-bottom: 100px;
+    position: fixed;
+    z-index: 1;
+    align-self: self-end;
+}
+
+.icons {
+    position: fixed;
+    align-self: self-end;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.licons > img {
+    padding: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+
+
+.licons::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px; 
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff; 
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.licons:hover::before {
+    transform: scaleX(1);
+}
+
+
