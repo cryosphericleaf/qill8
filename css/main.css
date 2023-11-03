@@ -174,3 +174,31 @@ body {
 }
 
 
+/* CSS media query for mobile devices */
+@media screen and (max-width: 600px) {
+  .name {
+      font-size: 2rem; 
+  }
+
+  .login {
+      font-size: 2rem; 
+  }
+
+  .menuitem {
+      font-size: 2rem; 
+  }
+
+  #menuitems {
+      margin-left: 2rem;
+  }
+
+  .divider {
+      margin-bottom: 10vw; 
+  }
+
+  .licons > img {
+      padding: 5px;
+      width: 20px;
+      height: 20px;
+  }
+}
